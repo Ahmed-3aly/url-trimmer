@@ -2,19 +2,19 @@
 Simple 'URL TRIMMER' application.
 
 backend stacks:
-	* C#, ASP.NET Code, SQL, nunit
-	* TypeScript, node, express, mongoDB, jest
+ - C#, ASP.NET Code, SQL, nunit
+ - TypeScript, node, express, mongoDB, jest
 
 frontend stacks:
-	* TypeScript, Vue, Mobx, jest
-	* TypeScript, React, Mobx, jest
+ - TypeScript, Vue, Mobx, jest
+ - TypeScript, React, Mobx, jest
 
 docker images used:
-	* node:14.5 (customized as per the docker-npm-builder)
-		used as build agend
-	* node:14.5-slim (customized as per the docker-npm-builder)
-		used as express api host
-	* nginx:stable-alpine
+ - node:14.5 (customized as per the docker-npm-builder)
+ 	used as build agend
+ - node:14.5-slim (customized as per the docker-npm-builder)
+ 	used as express api host
+ - nginx:stable-alpine
 		used as frontend static files host
 
 ================
