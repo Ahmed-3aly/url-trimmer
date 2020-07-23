@@ -1,0 +1,54 @@
+version: "3.8"
+
+volumes:
+    volume-database:
+
+networks:
+    network-backend:
+        driver: bridge
+    network-frontend:
+        driver: bridge
+
+services:
+    vue:
+        container_name: vue
+        build: ./vue/
+        restart: always
+        ports:
+            - "3000:3000"
+        links:
+            - backend
+        networks:
+            - network-frontend
+            - network-backend
+        depends_on:
+            - database
+            - backend
+    backend:
+        container_name: backend
+        build: ./api/
+        restart: always
+        ports:
+            - "5000:5000"
+        links:
+            - database
+        depends_on:
+            - database
+        networks:
+            - network-backend
+        environment:
+            - NODE_ENV=DOCKER
+            - NODE_IN_MEMORY=FALSE
+    database:
+        container_name: database
+        image: mongo
+        restart: always
+        environment:
+            MONGO_INITDB_DATABASE: mongoose
+        volumes:
+            - volume-database:/database/
+        ports:
+            - 27017:27017
+        networks:
+            - network-backend
+        command: mongod --noauth

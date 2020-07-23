@@ -1,0 +1,32 @@
+{
+  "name": "url-trimmer-client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
+    "mobx": "^5.15.4",
+    "mobx-vue": "^2.0.10",
+    "vue": "^2.6.11",
+    "vue-property-decorator": "^8.4.2",
+    "vue-router": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-plugin-typescript": "~4.4.0",
+    "@vue/cli-plugin-unit-jest": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/test-utils": "^1.0.3",
+    "typescript": "~3.9.3",
+    "vue-class-component": "^7.2.3",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

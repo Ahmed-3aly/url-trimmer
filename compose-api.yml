@@ -1,0 +1,36 @@
+version: "3.8"
+
+volumes:
+    volume-database:
+
+networks:
+    network-backend:
+        driver: bridge
+
+services:
+    backend:
+        container_name: backend
+        build: ./api/
+        restart: always
+        ports:
+            - "5000:5000"
+        links:
+            - database
+        depends_on:
+            - database
+        networks:
+            - network-backend
+        environment:
+            - NODE_ENV=DOCKER
+            - NODE_IN_MEMORY=FALSE
+    database:
+        container_name: database
+        image: mongo
+        restart: always
+        volumes:
+            - volume-database:/database/
+        ports:
+            - 27017:27017
+        networks:
+            - network-backend
+        command: mongod --noauth

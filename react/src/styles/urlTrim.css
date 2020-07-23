@@ -1,0 +1,30 @@
+
+/* layout */
+.urlTrim
+{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.urlTrim > *
+{
+    flex-grow: 1;
+}
+
+.urlTrim > *:not(:first-child)
+{
+    margin-top: 20px;
+}
+
+.urlTrim > button,
+.urlTrim > a
+{
+    text-align: center;
+}
+
+.urlTrimLabel
+{
+    text-transform: uppercase;
+}

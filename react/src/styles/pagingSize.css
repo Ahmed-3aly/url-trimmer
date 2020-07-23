@@ -1,0 +1,23 @@
+
+/* layout */
+.pagingSize
+{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+
+.pagingSize > *:not(:first-child)
+{
+    min-height: 28px;
+    min-width: 28px;
+    margin-left: 5px;
+}
+
+.pagingSize > *:not(button)
+{
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+}

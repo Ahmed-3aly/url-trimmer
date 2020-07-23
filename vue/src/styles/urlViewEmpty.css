@@ -1,0 +1,16 @@
+
+.urlViewEmpty
+{
+    display: grid;
+    grid-template-areas:
+        '. . .'
+        '. v .'
+        '. . .';
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 4fr auto 5fr;
+}
+
+.urlViewEmptyLabel
+{
+    grid-area: v;
+}

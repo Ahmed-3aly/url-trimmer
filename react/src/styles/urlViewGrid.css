@@ -1,0 +1,49 @@
+
+.urlViewGrid
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.urlViewGrid > *
+{
+    background: var(--color-semi-background);
+    display: grid;
+    grid-template-areas:
+        'a . i'
+        '. . .'
+        'b . j';
+    grid-template-columns: auto 10px 1fr;
+    grid-template-rows: auto 10px auto;
+    padding: 10px;
+}
+
+.urlViewGrid > *:not(:first-child)
+{
+    margin-top: 10px;
+}
+
+.urlViewGrid > * > *:nth-child(1)
+{
+    grid-area: a;
+}
+
+.urlViewGrid > * > *:nth-child(2)
+{
+    grid-area: i;
+}
+
+.urlViewGrid > * > *:nth-child(3)
+{
+    grid-area: b;
+}
+
+.urlViewGrid > * > *:nth-child(4)
+{
+    grid-area: j;
+}
+
+.urlViewGrid > * > div
+{
+    text-align: right;
+}

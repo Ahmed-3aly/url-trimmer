@@ -1,0 +1,26 @@
+
+/* layout */
+.pagingIndex
+{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.pagingIndex > *
+{
+    min-height: 28px;
+}
+
+.pagingIndex > *:not(:first-child)
+{
+    margin-left: 5px;
+}
+
+.pagingIndex > *:not(button)
+{
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+}
