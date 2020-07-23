@@ -12,10 +12,10 @@ frontend stacks:
 docker images used:
  - node:14.5 (customized as per the docker-npm-builder)
  	used as build agend
- - node:14.5-slim (customized as per the docker-npm-builder)
+ - node:14.5-slim
  	used as express api host
  - nginx:stable-alpine
-		used as frontend static files host
+	used as frontend static files host
 
 ================
 API
